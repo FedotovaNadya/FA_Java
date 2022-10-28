@@ -4,7 +4,7 @@ public class Card {
     int balance = 0;
     int trips = 0;
     String cardType = "Обычная";
-
+    
     public Card(int balance, int trips, String cardType){
         this.balance = balance; //баланс, кол-во денег
         this.trips = trips; //кол-во поездок
@@ -30,7 +30,7 @@ public class Card {
         }
     }
 
-    
+
 
     public static void main(String[] args) {
         // Card test1 = new Card(120,0,"Nhjqrf");
