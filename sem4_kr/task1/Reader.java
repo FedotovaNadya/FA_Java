@@ -1,4 +1,4 @@
-package sem4_kr;
+package sem4_kr.task1;
 
 public class Reader {
     String fio;
