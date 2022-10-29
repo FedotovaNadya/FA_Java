@@ -26,19 +26,9 @@ public class Main {
         // System.out.println(employees[0].averageMonthlySalary());
         // printEmployees(employees);
         //A
-
-
-        // System.out.println("=============Comporator============");       
-        // Comparator<Employee> emploeesInitialsComparator 
-        // = Comparator.comparing(Employee::getFio);
-
-        // Comparator<Employee> emploeesComparator 
-        // = Comparator.comparing(Employee::averageMonthlySalary);
-        Comparator<Employee> emploeesComparator = new EmployeeComporator();
-        // Arrays.sort(employees, emploeesInitialsComparator);
         
+        Comparator<Employee> emploeesComparator = new EmployeeComporator();      
         Arrays.sort(employees, emploeesComparator);
-        // printEmployees(employees);
 
         //B
         for (int i = 0; i < 5; i++) {
