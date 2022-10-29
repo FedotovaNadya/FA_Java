@@ -38,8 +38,6 @@ public class Main {
         for (int i = (employees.length-3);i<employees.length;i++ ){
             System.out.println(employees[i].getId());
         }
-        //D
-
 
     }
 }
