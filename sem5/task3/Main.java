@@ -6,6 +6,7 @@ public class Main {
         PrintThread pr1 = new PrintThread(builder);
         PrintThread pr2 = new PrintThread(builder);
         PrintThread pr3 = new PrintThread(builder);
+        
         pr1.start();
         pr2.start();
         pr3.start();
