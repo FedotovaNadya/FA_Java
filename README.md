@@ -8,4 +8,4 @@
 1. [Контрольная работа](https://github.com/FedotovaNadya/FA_Java/tree/main/sem4_kr)
 1. [Задачи на потоки](https://github.com/FedotovaNadya/FA_Java/tree/main/sem5)
 1. [Задачи на рекурсии](https://github.com/FedotovaNadya/FA_Java/tree/main/sem6)
-1. 
+1. ["Проект"](https://github.com/FedotovaNadya/FA_Java/tree/main/project)
