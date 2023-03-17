@@ -9,3 +9,7 @@
 1. [Задачи на потоки](https://github.com/FedotovaNadya/FA_Java/tree/main/sem5)
 1. [Задачи на рекурсии](https://github.com/FedotovaNadya/FA_Java/tree/main/sem6)
 1. ["Проект"](https://github.com/FedotovaNadya/FA_Java/tree/main/project)
+
+Второй семестр 
+1. [Подключение БД tests](https://github.com/FedotovaNadya/FA_Java/tree/main/sem8)
+1. [Блог](https://github.com/FedotovaNadya/FA_Java/tree/main/sem9)

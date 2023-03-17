@@ -1,6 +1,6 @@
 package sem4_kr.task2;
-import java.util.Arrays;
-import java.util.Comparator;
+// import java.util.Arrays;
+// import java.util.Comparator;
 public class Garage {
     
     int max_capacity;

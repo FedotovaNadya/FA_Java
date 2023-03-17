@@ -15,8 +15,8 @@ abstract class Shape {
 }
 
 abstract class Pyramid extends Shape {
-    private double s;
-    private double h;
+    // private double s;
+    // private double h;
 
 }
 
@@ -47,7 +47,7 @@ class SolidOfRevolution extends Shape {
 }
 
 abstract class Cylinder extends SolidOfRevolution {
-    private double height;
+    // private double height;
 
 
 }

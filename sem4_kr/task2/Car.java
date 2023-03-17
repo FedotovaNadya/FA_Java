@@ -1,16 +1,12 @@
 package sem4_kr.task2;
 
 public class Car {
-    private String color;
     private int maxSpeed;
-    private String transmissionType;
     private int speed;
     private int price;
 
-    public Car(String color,int maxSpeed,String transmissionType,int speed,int price){
-        this.color = color;
+    public Car(int maxSpeed,int speed,int price){
         this.maxSpeed = maxSpeed;
-        this.transmissionType = transmissionType;
         this.speed = speed;
         this.price = price;
     }

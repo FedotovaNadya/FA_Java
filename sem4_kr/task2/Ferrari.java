@@ -1,15 +1,15 @@
 package sem4_kr.task2;
 
 public class Ferrari extends Car{
-    public Ferrari(String color, int price) {
-        super(color, 340, "seven-speed dual-clutch", 0, price);
-        //TODO Auto-generated constructor stub
+    public Ferrari(int price) {
+        super(340, 0, price);
+        // 
     }
 
     int accelerateSpeed = 20;
-    @Override
+    // @Override
     public void accelerate(int speed) {
-        // TODO Auto-generated method stub
+        
         super.accelerate(speed+accelerateSpeed);
     }
 }
