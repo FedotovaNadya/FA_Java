@@ -16,7 +16,10 @@
                 <p th:text="${el.full_text}"></p>
                 <p><b>Просмотры: </b><span th:text="${el.views}"></span></p>
                 <a th:href="${el.id}+'/edit'" class="btn btn-warning">Edit</a>
-                <a th:href="${el.id}+'/remove'" class="btn btn-warning">Delete</a>
+                <form th:action="'/blog/'+${el.id}+'/remove'" method="post">
+
+                    <button type="submit" class="btn btn-warning">Delete</button>
+                </form>
             </div>
         </div><!-- /.container -->
     </main>
