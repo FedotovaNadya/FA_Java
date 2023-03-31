@@ -1,6 +1,7 @@
 package com.blog.blog.controllers;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.blog.blog.models.Article;
+import com.blog.blog.models.Comment;
 import com.blog.blog.repo.ArticleRepository;
+import com.blog.blog.repo.CommentRepository;
 
 
 @Controller
@@ -20,6 +23,9 @@ public class BlogController {
 
 	@Autowired
 	private ArticleRepository articleRepository;
+	@Autowired
+	private CommentRepository commentRepository;
+
 
 	@GetMapping("/blog")
     public String blogMain( Model model) {
@@ -40,6 +46,7 @@ public class BlogController {
 
 		return "redirect:/blog";
 	}
+	
 	@GetMapping("/blog/{id}")
     public String blogDetails(@PathVariable(value="id") Long id, Model model) {
 		if (!articleRepository.existsById(id)){
@@ -48,7 +55,13 @@ public class BlogController {
 		Optional<Article> article = articleRepository.findById(id);
 		ArrayList<Article> res = new ArrayList<>();
 		article.ifPresent(res::add);
-		 model.addAttribute("article", res);
+
+		
+		Iterable <Comment> comment = commentRepository.findByArticleId(id);
+		
+
+		model.addAttribute("article", res);
+		model.addAttribute ("comments", comment);
 		return "blog-details";
 	}
 
@@ -82,5 +95,12 @@ public class BlogController {
 		return "redirect:/blog";
 	}
 
+	@PostMapping("/blog/{id}/comment")
+    public String blogNewComment(@PathVariable(value="id") Long id,@RequestParam String author, @RequestParam String full_text,  Model model) {
+		Article article = articleRepository.findById(id).orElseThrow();
+		Comment comment = new Comment(author, full_text, article);
+		commentRepository.save(comment);
+		return "redirect:/blog/{id}";
+	}
 
 }
