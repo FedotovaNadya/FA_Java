@@ -1,9 +1,14 @@
 package com.blog.blog.models;
 
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Article {
@@ -13,6 +18,9 @@ public class Article {
     private Long id;
     private String title, anons, full_text;
     private int views;
+    @JsonIgnore
+    @OneToMany
+    private Set<Comment> comments;
 
     public Article() {
     }

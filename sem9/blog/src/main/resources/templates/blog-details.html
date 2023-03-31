@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <header th:insert="blocks/header :: header"></header>
+    <header th:insert="~{blocks/header :: header}"></header>
     <main>
         <div class="container mt-5">
             <div th:each="el: ${article}" class="alert alert-info mt-2">
@@ -17,14 +17,29 @@
                 <p><b>Просмотры: </b><span th:text="${el.views}"></span></p>
                 <a th:href="${el.id}+'/edit'" class="btn btn-warning">Edit</a>
                 <form th:action="'/blog/'+${el.id}+'/remove'" method="post">
-
                     <button type="submit" class="btn btn-warning">Delete</button>
                 </form>
             </div>
-        </div><!-- /.container -->
+
+        </div>
+        <div th:each="el: ${article}" class="container mt-5">
+            <form th:action="'/blog/'+${el.id}+'/comment'" method="post">
+                <input type="text" name="author" placeholder="Введите ваше имя"><br>
+                <textarea name="full_text" id="full_text" cols="30" rows="10" placeholder="Введите текст комментария"></textarea><br>
+                <button type="submit">Отправить</button>
+            </form>
+            <br><br>
+            <div th:each="com: ${comments}" class="alert alert-info mt-2">
+                <p th:text="${com.author}">sdfnsdfn;</p><br>
+                <p th:text="${com.full_text}"></p><br>
+                <br>
+            </div>
+
+        </div>
+        <!-- /.container -->
     </main>
     <!-- FOOTER -->
-    <footer th:insert="blocks/footer :: footer">
+    <footer th:insert="~{blocks/footer :: footer}">
     </footer>
 
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
