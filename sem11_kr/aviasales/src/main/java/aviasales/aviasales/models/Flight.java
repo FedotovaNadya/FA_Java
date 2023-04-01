@@ -1,5 +1,5 @@
 package aviasales.aviasales.models;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +24,8 @@ public class Flight {
     private Route routeId;
 
     private String aviaName;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy HH:mm")
     private LocalDateTime datetime;
     private int duration;
 
