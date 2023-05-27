@@ -16,3 +16,6 @@
 1. [RestFul service](https://github.com/FedotovaNadya/FA_Java/tree/main/sem10)
 1. [Контрольная работа](https://github.com/FedotovaNadya/FA_Java/tree/main/sem11_kr)
 1. [Лекция JavaFc](https://github.com/FedotovaNadya/FA_Java/tree/main/lec_13)
+1. [Отель (29.04)](https://github.com/FedotovaNadya/FA_Java/tree/main/sem13)
+1. [Поезда (13.05) + JavaDoc](https://github.com/FedotovaNadya/FA_Java/tree/main/sem14)
+1. [Контрольная работа](https://github.com/FedotovaNadya/FA_Java/tree/main/sem16_kr)
