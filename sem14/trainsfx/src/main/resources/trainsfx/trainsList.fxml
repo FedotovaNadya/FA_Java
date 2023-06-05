@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="374.0" prefWidth="547.0" spacing="20.0"
+    xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="trainsfx.SecondaryController">
+    <children>
+        <TableView prefHeight="299.0" prefWidth="507.0">
+            <columns>
+                <TableColumn prefWidth="204" text="Наименование" />
+                <TableColumn prefWidth="86" text="Тип" />
+                <TableColumn prefWidth="125" text="Количество вагонов" />
+                <TableColumn minWidth="7" prefWidth="93" text="Мест в вагоне" />
+            </columns>
+        </TableView>
+        <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Switch to Primary View" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

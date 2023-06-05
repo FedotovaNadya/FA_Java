@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="503.0" prefWidth="912.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trainsfx.PrimaryController">
+   <children>
+      <HBox prefHeight="41.0" prefWidth="617.0">
+         <children>
+            <Button fx:id="trainsList" onAction="#switchToTrainsList" prefHeight="25.0" prefWidth="183.0" text="Список поездов" />
+            <Button fx:id="addTrain" onAction="#switchToAddTrain" prefHeight="25.0" prefWidth="223.0" text="Новый поезд" />
+            <Button fx:id="addTrip" onAction="#switchToAddTrip" prefHeight="25.0" prefWidth="212.0" text="Новый рейс" />
+         </children>
+      </HBox>
+      <Label text="Primary View" />
+      <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Switch to Secondary View" />
+      <TableView prefHeight="335.0" prefWidth="617.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Откуда" />
+          <TableColumn prefWidth="75.0" text="Куда" />
+            <TableColumn prefWidth="51" text="Дата отправления" />
+            <TableColumn prefWidth="100" text="Время отправления" />
+            <TableColumn prefWidth="75.0" text="Дата прибытия" />
+            <TableColumn prefWidth="75.0" text="Время прибытия" />
+            <TableColumn prefWidth="163" text="Количество мест в поезде " />
+            <TableColumn prefWidth="162.0" text="Количество свободных мест" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
