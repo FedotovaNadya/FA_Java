@@ -19,3 +19,4 @@
 1. [Отель (29.04)](https://github.com/FedotovaNadya/FA_Java/tree/main/sem13)
 1. [Поезда (13.05) + JavaDoc](https://github.com/FedotovaNadya/FA_Java/tree/main/sem14)
 1. [Контрольная работа](https://github.com/FedotovaNadya/FA_Java/tree/main/sem16_kr)
+1. [Экзамен 10.06.23](https://github.com/FedotovaNadya/FA_Java/tree/main/exam)
